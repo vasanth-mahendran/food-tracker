@@ -6,45 +6,46 @@ provides-nominal:
 provides-member:
 - ["C11FoodTracker18MealViewController", ""]
 provides-dynamic-lookup:
-- "checkValidNames"
-- "imagePickerController"
-- "prepareForSegue"
-- "textFieldDidBeginEditing"
-- "ratingControl"
-- "textFieldShouldReturn"
-- "imagePickerControllerDidCancel"
-- "nameTextField"
-- "saveButton"
-- "selectImageFromPhotoLibrary"
 - "textFieldDidEndEditing"
 - "cancelButton"
-- "viewDidLoad"
+- "prepareForSegue"
+- "meal"
+- "ratingControl"
+- "textFieldShouldReturn"
 - "photoImageView"
+- "viewDidLoad"
+- "checkValidNames"
+- "selectImageFromPhotoLibrary"
+- "textFieldDidBeginEditing"
+- "nameTextField"
+- "saveButton"
+- "imagePickerControllerDidCancel"
+- "imagePickerController"
 depends-top-level:
 - "UIStoryboardSegue"
-- !private "StringLiteralType"
-- !private "==="
-- !private "UINavigationController"
-- "UITextField"
-- !private "UIImage"
-- "RatingControl"
-- "UIImageView"
-- "MealViewController"
-- "Meal"
-- "UIBarButtonItem"
-- !private "??"
-- !private "!"
-- !private "BooleanLiteralType"
 - "UIViewController"
+- !private "BooleanLiteralType"
+- !private "UINavigationController"
+- "UINavigationControllerDelegate"
+- "UIImagePickerController"
+- !private "??"
+- "UITapGestureRecognizer"
+- "Meal"
+- !private "UIImagePickerControllerOriginalImage"
+- "UIBarButtonItem"
+- "MealViewController"
+- "UITextField"
+- "UIImageView"
+- !private "StringLiteralType"
+- !private "UIImage"
+- !private "!"
+- "AnyObject"
+- "UIImagePickerControllerDelegate"
+- "RatingControl"
+- "Bool"
 - "UITextFieldDelegate"
 - "String"
-- "UIImagePickerController"
-- "UIImagePickerControllerDelegate"
-- !private "UIImagePickerControllerOriginalImage"
-- "UINavigationControllerDelegate"
-- "Bool"
-- "UITapGestureRecognizer"
-- "AnyObject"
+- !private "==="
 depends-member:
 - !private ["PSs9AnyObject", "Meal"]
 - !private ["PSs9AnyObject", "UIImagePickerController"]
@@ -105,6 +106,7 @@ depends-member:
 - ["PSs11CVarArgType", "init"]
 - !private ["PSs11CVarArgType", "isEmpty"]
 - ["PSs11CVarArgType", "meal"]
+- !private ["PSs11CVarArgType", "name"]
 - ["PSs11CVarArgType", "nameTextField"]
 - ["PSs11CVarArgType", "navigationController"]
 - ["PSs11CVarArgType", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -158,6 +160,7 @@ depends-member:
 - ["PSs23CustomStringConvertible", "init"]
 - !private ["PSs23CustomStringConvertible", "isEmpty"]
 - ["PSs23CustomStringConvertible", "meal"]
+- !private ["PSs23CustomStringConvertible", "name"]
 - ["PSs23CustomStringConvertible", "nameTextField"]
 - ["PSs23CustomStringConvertible", "navigationController"]
 - ["PSs23CustomStringConvertible", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -207,6 +210,7 @@ depends-member:
 - ["PSs9Equatable", "init"]
 - !private ["PSs9Equatable", "isEmpty"]
 - ["PSs9Equatable", "meal"]
+- !private ["PSs9Equatable", "name"]
 - ["PSs9Equatable", "nameTextField"]
 - ["PSs9Equatable", "navigationController"]
 - ["PSs9Equatable", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -252,6 +256,7 @@ depends-member:
 - ["PSs8Hashable", "init"]
 - !private ["PSs8Hashable", "isEmpty"]
 - ["PSs8Hashable", "meal"]
+- !private ["PSs8Hashable", "name"]
 - ["PSs8Hashable", "nameTextField"]
 - ["PSs8Hashable", "navigationController"]
 - ["PSs8Hashable", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -286,6 +291,7 @@ depends-member:
 - !private ["PSs9Indexable", "_Element"]
 - !private ["PSs9Indexable", "subscript"]
 - !private ["VSs17IndexingGenerator", "Element"]
+- !private ["C11FoodTracker4Meal", "deinit"]
 - !private ["C11FoodTracker4Meal", "image"]
 - !private ["C11FoodTracker4Meal", "init"]
 - !private ["C11FoodTracker4Meal", "name"]
@@ -347,6 +353,7 @@ depends-member:
 - ["PSo8NSCoding", "init"]
 - !private ["PSo8NSCoding", "isEmpty"]
 - ["PSo8NSCoding", "meal"]
+- !private ["PSo8NSCoding", "name"]
 - ["PSo8NSCoding", "nameTextField"]
 - ["PSo8NSCoding", "navigationController"]
 - ["PSo8NSCoding", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -435,6 +442,7 @@ depends-member:
 - ["CSo8NSObject", "init"]
 - !private ["CSo8NSObject", "isEmpty"]
 - ["CSo8NSObject", "meal"]
+- !private ["CSo8NSObject", "name"]
 - ["CSo8NSObject", "nameTextField"]
 - ["CSo8NSObject", "navigationController"]
 - ["CSo8NSObject", "navigationControllerPreferredInterfaceOrientationForPresentation"]
@@ -475,6 +483,7 @@ depends-member:
 - ["PSo16NSObjectProtocol", "init"]
 - !private ["PSo16NSObjectProtocol", "isEmpty"]
 - ["PSo16NSObjectProtocol", "meal"]
+- !private ["PSo16NSObjectProtocol", "name"]
 - ["PSo16NSObjectProtocol", "nameTextField"]
 - ["PSo16NSObjectProtocol", "navigationController"]
 - ["PSo16NSObjectProtocol", "navigationControllerPreferredInterfaceOrientationForPresentation"]

@@ -87,6 +87,8 @@ typedef int swift_int3  __attribute__((__ext_vector_type__(3)));
 typedef int swift_int4  __attribute__((__ext_vector_type__(4)));
 #if defined(__has_feature) && __has_feature(modules)
 @import UIKit;
+@import ObjectiveC;
+@import Foundation;
 @import CoreGraphics;
 #endif
 
@@ -108,10 +110,25 @@ SWIFT_CLASS("_TtC11FoodTracker11AppDelegate")
 - (nonnull instancetype)init OBJC_DESIGNATED_INITIALIZER;
 @end
 
+@class UIImage;
+@class NSURL;
+@class NSCoder;
+
+SWIFT_CLASS("_TtC11FoodTracker4Meal")
+@interface Meal : NSObject <NSCoding>
+@property (nonatomic, copy) NSString * __nonnull name;
+@property (nonatomic) NSInteger rating;
+@property (nonatomic, strong) UIImage * __nullable image;
++ (NSURL * __nonnull)DirectoryPath;
++ (NSURL * __nonnull)archivePath;
+- (void)encodeWithCoder:(NSCoder * __nonnull)aCoder;
+- (nullable instancetype)initWithName:(NSString * __nonnull)name rating:(NSInteger)rating image:(UIImage * __nullable)image OBJC_DESIGNATED_INITIALIZER;
+- (nullable instancetype)initWithCoder:(NSCoder * __nonnull)aDecoder;
+@end
+
 @class UILabel;
 @class UIImageView;
 @class RatingControl;
-@class NSCoder;
 
 SWIFT_CLASS("_TtC11FoodTracker17MealTableViewCell")
 @interface MealTableViewCell : UITableViewCell
@@ -131,8 +148,11 @@ SWIFT_CLASS("_TtC11FoodTracker17MealTableViewCell")
 
 SWIFT_CLASS("_TtC11FoodTracker23MealTableViewController")
 @interface MealTableViewController : UITableViewController
+@property (nonatomic, copy) NSArray<Meal *> * __nonnull meals;
 - (void)loadSampleMeals;
 - (void)viewDidLoad;
+- (void)saveMeals;
+- (NSArray<Meal *> * __nullable)loadMeals;
 - (IBAction)unwindToMealList:(UIStoryboardSegue * __nonnull)unwindSegue;
 - (void)didReceiveMemoryWarning;
 - (NSInteger)numberOfSectionsInTableView:(UITableView * __nonnull)tableView;
@@ -152,6 +172,7 @@ SWIFT_CLASS("_TtC11FoodTracker23MealTableViewController")
 
 SWIFT_CLASS("_TtC11FoodTracker18MealViewController")
 @interface MealViewController : UIViewController <UINavigationControllerDelegate, UIImagePickerControllerDelegate, UITextFieldDelegate>
+@property (nonatomic, strong) Meal * __nullable meal;
 @property (nonatomic, weak) IBOutlet UITextField * __null_unspecified nameTextField;
 @property (nonatomic, weak) IBOutlet UIImageView * __null_unspecified photoImageView;
 @property (nonatomic, weak) IBOutlet RatingControl * __null_unspecified ratingControl;

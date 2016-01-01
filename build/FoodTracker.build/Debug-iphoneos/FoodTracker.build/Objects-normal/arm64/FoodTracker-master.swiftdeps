@@ -1,0 +1,10 @@
+version: "Apple Swift version 2.1.1 (swiftlang-700.1.101.15 clang-700.1.81)"
+options: "27db3351af170989204b4d0c238fc4fd"
+build_time: [504924737, 399804000]
+inputs:
+  "/Users/vasanthmahendran/Documents/workspace/iOS/FoodTracker/FoodTracker/MealViewController.swift": [504909282, 0]
+  "/Users/vasanthmahendran/Documents/workspace/iOS/FoodTracker/FoodTracker/MealTableViewCell.swift": [504776623, 0]
+  "/Users/vasanthmahendran/Documents/workspace/iOS/FoodTracker/FoodTracker/Meal.swift": [504919377, 0]
+  "/Users/vasanthmahendran/Documents/workspace/iOS/FoodTracker/FoodTracker/AppDelegate.swift": [504502782, 0]
+  "/Users/vasanthmahendran/Documents/workspace/iOS/FoodTracker/FoodTracker/RatingControl.swift": [504742253, 0]
+  "/Users/vasanthmahendran/Documents/workspace/iOS/FoodTracker/FoodTracker/MealTableViewController.swift": [504921261, 0]
